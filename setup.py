@@ -11,10 +11,10 @@ setuptools.setup(
 	description="A simple converter from complex objects to JSON",
 	long_description=long_description,
 	long_description_content_type="text/markdown",
-	url= 'https:github.com/matias-alejandro/serialiJSON',
+	url= 'https://github.com/matias-alejandro/serialiJSON',
 	project_urls={
-		'Source': 'https:github.com/matias-alejandro/serialiJSON',
-		'Tracker': 'https:github.com/matias-alejandro/serialiJSON/issues',
+		'Source': 'https://github.com/matias-alejandro/serialiJSON',
+		'Tracker': 'https://github.com/matias-alejandro/serialiJSON/issues',
 	},
 	package_dir={"": "src"},
 	packages=setuptools.find_packages(where="src"),

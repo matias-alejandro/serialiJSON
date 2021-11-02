@@ -15,7 +15,7 @@ setuptools.setup(
 	project_urls={
 		'Source': 'https:github.com/matias-alejandro/serialiJSON',
 		'Tracker': 'https:github.com/matias-alejandro/serialiJSON/issues',
-},
+	},
 	package_dir={"": "src"},
 	packages=setuptools.find_packages(where="src"),
 	key_words='converter toJSON complex object base class',

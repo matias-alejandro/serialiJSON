@@ -3,7 +3,7 @@ import unittest
 class TestsSerialiJSON(unittest.TestCase):
 
 	def setUp(self):
-		from serialiJSON.serialiJSON import BaseSerializable
+		from serialiJSON import BaseSerializable
 
 		class Item(BaseSerializable):
 			def __init__(self, itemName, isAlive):

@@ -4,9 +4,11 @@ class BaseSerializable:
 	basicTypes = [str, int, float, bool]
 
 	def toJson(self, indent=None):
+		'''Convert to JSON'''
 		return json.dumps(self.toDict(), indent=indent)
 
 	def toDict(self):
+		'''Internal use method'''
 		diccionario = {}
 		for attr, value in self.__dict__.items():
 			tipo = type(self.__dict__.get(attr))
@@ -20,6 +22,7 @@ class BaseSerializable:
 		return diccionario
 
 	def toDictLista(self, itemDeLaLista):
+		'''Internal use method'''
 		tipo = type(itemDeLaLista)
 		if tipo in self.basicTypes:
 			return itemDeLaLista

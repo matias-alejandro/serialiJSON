@@ -5,7 +5,7 @@
 ### Installation
 
 ```
-python -m install serialiJSON
+python pip -m install serialiJSON
 ```
 
 ### Usage

@@ -44,33 +44,3 @@ class TestsSerialiJSON(unittest.TestCase):
 
 if __name__ == '__main__':
 	unittest.main()
-
-# from serialiJSON.serialiJSON import BaseSerializable
-
-# class Item(BaseSerializable):
-# 	def __init__(self, itemName, isAlive):
-# 		self.itemName = itemName
-# 		self.isAliva = isAlive
-
-# class Pet(BaseSerializable):
-# 	def __init__(self, name, age, favItems):
-# 		self.name = name
-# 		self.age = age
-# 		self.favItems = favItems
-
-# class Human(BaseSerializable):
-# 	def __init__(self, name, age, pets):
-# 		self.name = name
-# 		self.age = age
-# 		self.pets = pets
-
-# items = [Item("snow ball", False),Item("tree", True)]
-
-# pets = [
-# 		Pet("Cat", 12, [Item("snow ball", False),Item("tree", True)]), 
-# 		Pet("Dog", 4, [Item("snow ball", False),Item("tree", True)])
-# 	]
-
-# human = Human("name", 90, pets)
-
-# print(human.toJson())

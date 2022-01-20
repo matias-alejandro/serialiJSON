@@ -1,6 +1,11 @@
 # SerialiJSON
 
-`serialiJSON` is a python tool that allows you to convert complex objects to JSON only by inheriting the BaseSerializable class.
+![GitHub](https://img.shields.io/github/license/matias-alejandro/serialiJSON)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/matias-alejandro/serialiJSON/Tests)
+
+### Description
+
+`serialiJSON` is a python `(2.x, 3.x)` tool that allows you to convert complex objects to JSON only by inheriting the BaseSerializable class.
 
 ### Installation
 

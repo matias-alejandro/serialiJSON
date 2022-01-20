@@ -1,4 +1,5 @@
 import unittest
+import json
 
 class TestsSerialiJSON(unittest.TestCase):
 
@@ -8,7 +9,7 @@ class TestsSerialiJSON(unittest.TestCase):
 		class Item(BaseSerializable):
 			def __init__(self, itemName, isAlive):
 				self.itemName = itemName
-				self.isAliva = isAlive
+				self.isAlive = isAlive
 
 		class Pet(BaseSerializable):
 			def __init__(self, name, age, favItems):
@@ -31,16 +32,16 @@ class TestsSerialiJSON(unittest.TestCase):
 		self.human = Human("name", 90, self.pets)
 
 	def testOneLevelObject(self):
-		json = '{"itemName": "snow ball", "isAliva": false}'
-		self.assertEqual(self.item.toJson(), json)
+		jsonResult = '{"itemName": "snow ball", "isAlive": false}'
+		self.assertEqual(json.loads(self.item.toJson()), json.loads(jsonResult))
 
 	def testTwoLevelObject(self):
-		json = '{"name": "Cat", "age": 12, "favItems": [{"itemName": "snow ball", "isAliva": false}, {"itemName": "tree", "isAliva": true}]}'
-		self.assertEqual(self.pet.toJson(), json)
+		jsonResult = '{"name": "Cat", "age": 12, "favItems": [{"itemName": "snow ball", "isAlive": false}, {"itemName": "tree", "isAlive": true}]}'
+		self.assertEqual(json.loads(self.pet.toJson()), json.loads(jsonResult))
 
 	def testThreeLevelObject(self):
-		json = '{"name": "name", "age": 90, "pets": [{"name": "Cat", "age": 12, "favItems": [{"itemName": "snow ball", "isAliva": false}, {"itemName": "tree", "isAliva": true}]}, {"name": "Dog", "age": 4, "favItems": [{"itemName": "snow ball", "isAliva": false}, {"itemName": "tree", "isAliva": true}]}]}'
-		self.assertEqual(self.human.toJson(), json)
+		jsonResult = '{"name": "name", "age": 90, "pets": [{"name": "Cat", "age": 12, "favItems": [{"itemName": "snow ball", "isAlive": false}, {"itemName": "tree", "isAlive": true}]}, {"name": "Dog", "age": 4, "favItems": [{"itemName": "snow ball", "isAlive": false}, {"itemName": "tree", "isAlive": true}]}]}'
+		self.assertEqual(json.loads(self.human.toJson()), json.loads(jsonResult))
 
 if __name__ == '__main__':
 	unittest.main()
